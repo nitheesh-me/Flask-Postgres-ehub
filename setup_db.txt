@@ -1,0 +1,7 @@
+mkdir postgresDB-ehub
+initdb ./postgresDB-ehub
+
+pg_ctl -D ./postgresDB-ehub -l ./log.txt start
+psql -h 10.111.1.219 -p 5100 ehub
+
+pg_ctl -D ./postgresDB-ehub -l ./log.txt stop
